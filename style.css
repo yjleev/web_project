@@ -16,8 +16,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
 
 body {
-    color: aqua;
-}
+    color: #00ffff;
+}   
 
 h2 {
     font-family: "Star Dust Bold", "Noto Sans KR", system-ui;
@@ -27,7 +27,7 @@ h2 {
     color: inherit;
 }
 
-h3 li.menu a{
+li.menu > a{
     font-family: "Star Dust Bold", "Noto Sans KR", system-ui;
     font-weight: 500;
     font-size: 17pt;
@@ -44,6 +44,9 @@ a, p {
     font-size: 10pt;
     text-decoration: none;
     color: inherit;
+    color: #ebffff;
+    white-space: normal;
+    word-break: keep-all;
 }
 
 header {
@@ -58,9 +61,14 @@ header {
     justify-content: space-around;
     backdrop-filter: blur(15px);
     background-color: #00000075;
+    z-index: 1;
 }
 
-nav > ul.nav-bar {
+nav > li {
+    color: inherit;
+}
+
+nav > ul#nav-bar {
     width: 700px;
     height: 60px;
     display: flex;
@@ -68,9 +76,29 @@ nav > ul.nav-bar {
     justify-content: space-between;
 }
 
-li {
-    color: inherit;
+/* ul#nav-bar > li.menu {
+    position: relative;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-align: center;
 }
+
+li.menu > ul#sub-bar {
+    display: none;
+    float: left;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #00000050;
+} */
+
+ul#sub-bar > li.sub-menu {
+    padding: 10px;
+    text-align: left;
+    backdrop-filter: blur(10px);
+}
+
 
 li:hover {
     color: #e6ffff;
@@ -78,7 +106,7 @@ li:hover {
     border: 1px solid #00ffff;
 }
 
-ul.nav-bar > li.menu {
+ul#nav-bar > li.menu {
     position: relative;
     width: 110px;
     padding: 10px 0;
@@ -86,7 +114,7 @@ ul.nav-bar > li.menu {
     text-align: center;
 }
 
-li.menu > ul.sub-bar {
+li.menu > ul#sub-bar {
     display: none;
     float: left;
     position: absolute;
@@ -95,12 +123,12 @@ li.menu > ul.sub-bar {
     background-color: #00000050;
 }
 
-ul.sub-bar >li.sub-menu {
+ul#sub-bar >li.sub-menu {
     padding: 10px;
     text-align: left;
 }
 
-li.menu:hover > ul.sub-bar {
+li.menu:hover > ul#sub-bar {
     display: block;
 }
 
@@ -109,19 +137,65 @@ header>img {
     object-fit: contain;
 }
 
-nav {
-    width: 100%;
-}
-
 #container {
     width: 100%;
     padding-top: 200px;
+    backdrop-filter: blur(2px);
+    background: linear-gradient(#00150f30 0%,
+                                #0b363150 50%, 
+                                #33003030 100%);
 }
 
 section {
-    width: 100%;
+    width: 900px;
+    margin: auto;
+    padding-bottom: 150px;
 }
 
+body::before {
+    content: "";
+    background-image: url(./image/background.png);
+    position: fixed;
+    background-size: cover;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+/* 
+section {
+    width: 100%;
+} */
+
 aside {
-    background-color: navy;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    cursor: pointer;
+}   
+
+span#scroll-top {
+    width: 50px;
+    height: 50px;
+    color: inherit;
+    border: 1px solid #00ffff;
+    background-color: #00ffff25;
+    text-align: center;
+    line-height: 47.5px;
+    transition: .3s;
+}
+
+span#scroll-top:hover {
+    color: #e6ffff;
+    background-color: #00ffff50;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#trailer {
+    width: 600px;
 }
