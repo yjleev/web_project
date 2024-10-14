@@ -320,12 +320,3 @@ div.awards > img {
     width: 250px;
     object-fit: contain;
 }
-#copyright > img {
-    width: 50px;
-}
-#SNS, #platform {
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-}
-
