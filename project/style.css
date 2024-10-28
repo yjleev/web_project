@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+/* 기본세팅 */
+
+
+
+header {
+    width: 100vw;
+    height: 100px;
+    background-color: #fff;
+    position: fixed;
+    z-index: 100;
+}
+
+.header-menu {
+    width: calc(85%);
+    height: calc(100% - 5px);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* header 세팅 */
+
+.github-logo {
+    width: 180px;
+    height: 60px;
+    background-color: rgb(60, 100, 255);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.github-logo:hover {
+    background-color: rgb(73, 60, 255);
+    transition: 0.2s ease-in-out;
+}
+
+.github-logo > div:first-child {
+    width: calc(55%);
+    height: calc(100%);
+    font-size: 20px;
+    text-align: center;
+    line-height: 55px;
+    font-weight: 600;
+    color: #fff;
+    font-size: 1.4em;
+}
+
+.github-img {
+    background-color: #fff;
+    width: calc(25%);
+    height: calc(75%);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.github-img > img {
+    width: calc(80%);
+    height: calc(80%);
+}
+/* header logo 세팅 */
+
+.header-nav {
+    width: calc(40%);
+    height: calc(100%);
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-nav > li {
+    width: calc(100% / 4);
+    height: calc(100%);
+    text-align: center;
+    align-content: center;
+}
+
+.header-nav > li > a {
+    font-size: 1.3em;
+    color: rgb(60, 100, 255);
+    font-weight: bold;
+    transition: 0.2s ease-out;
+}
+.header-nav > li > a:hover {
+    font-size: 1.3em;
+    color: rgb(60, 100, 255);
+    font-weight: bold;
+    text-shadow: 0px 0px 35px rgb(0, 51, 255);
+}
+
+.scroll-bk {
+    width: calc(100%);
+    height: 5px;
+    background-color: rgba(143, 152, 255, 0.6);
+    position: absolute;
+    bottom: 0;
+}
+
+.scroll-bar {
+    width: calc(00%);
+    height: calc(100%);
+    background-color: rgb(60, 100, 255, 0.8);
+}
+/* scroll bar 세팅 */
+
+/*       header       */
+
+
+#Intro {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(60, 100, 255, 0.1);
+}
+
+#About {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+}
+
+#Project {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(60, 100, 255, 0.1);
+}
+
+#contact {
+    width: 100vw;
+    height: 30vh;
+    background-color: #fff;
+}
