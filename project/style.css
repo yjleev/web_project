@@ -48,7 +48,7 @@ header {
     align-items: center;
 }
 .github-logo:hover {
-    background-color: rgb(73, 60, 255);
+    background-color: rgb(51, 79, 189);
     transition: 0.2s ease-in-out;
 }
 
@@ -60,7 +60,7 @@ header {
     line-height: 55px;
     font-weight: 600;
     color: #fff;
-    font-size: 1.4em;
+    font-size: 1.4rem;
 }
 
 .github-img {
@@ -95,7 +95,7 @@ header {
 }
 
 .header-nav > li > a {
-    font-size: 1.3em;
+    font-size: 1.3rem;
     color: rgb(60, 100, 255);
     font-weight: bold;
     transition: 0.2s ease-out;
@@ -154,3 +154,15 @@ main > section {
     height: 30vh;
     background-color: #fff;
 }
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 14px;
+    }
+    .github-logo {
+        display: none;
+    }   
+    .header-nav {
+        width: calc(100%);
+    }
+  }
